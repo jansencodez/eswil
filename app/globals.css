@@ -9,19 +9,31 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
+    --background: #ededed;
   }
 }
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+  }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.card{
+  @apply rounded-xl border border-x-cyan-950 p-5 h-5 flex justify-center items-center shadow-lg m-3;
+}
+
+.card:hover{
+  @apply border-cyan-950 transition-all duration-300 cursor-pointer ;
 }

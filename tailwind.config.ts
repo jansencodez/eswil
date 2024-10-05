@@ -1,3 +1,5 @@
+import { trace } from "console";
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,6 +14,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        scrollLeft:{
+          "0%":{transform:"translateX(100%)"},
+          "100%":{transform:"translateX(-100%)"},
+        },
+      },
+      animation: {
+        scrollLeft:"scrollLeft 20s linear infinite",
+      }
     },
   },
   plugins: [],
