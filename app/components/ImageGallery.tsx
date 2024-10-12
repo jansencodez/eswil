@@ -3,10 +3,10 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-function ImageGallery({images}) {
+function ImageGallery({images:[]}) {
   const [selectedImage, setSetselectedImage] = useState(null);
 
-  const handleClick = (src)=>{
+  const handleClick = (src:any)=>{
     setSetselectedImage(src);
   }
 

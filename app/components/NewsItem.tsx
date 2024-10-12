@@ -16,7 +16,7 @@ function NewsItem() {
   
   const [selectedImage, setSetselectedImage] = useState(null);
 
-  const handleClick = (src)=>{
+  const handleClick = (src:any)=>{
     setSetselectedImage(src);
   }
 
