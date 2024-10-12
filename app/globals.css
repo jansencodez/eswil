@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -30,10 +35,144 @@ body {
   }
 }
 
-.card{
-  @apply rounded-xl border border-x-cyan-950 p-5 h-5 flex justify-center items-center shadow-lg m-3;
+.card-btn{
+  @apply rounded-xl border border-x-cyan-950 p-5 h-5 flex w-full lg:w-fit md:w-fit justify-center items-center shadow-lg m-2;
 }
 
-.card:hover{
-  @apply border-cyan-950 transition-all duration-300 cursor-pointer ;
+.card-btn:hover{
+  @apply border-cyan-950 hover:bg-yellow-600 transition-all duration-300 cursor-pointer ;
+}
+
+.card{
+  @apply m-2 outline-none rounded-xl p-4 shadow-lg flex flex-col justify-between
+}
+
+@layer components{
+  p{
+    animation: 0.5s ease-in both;
+
+    animation-timeline: view();
+
+    animation-range: entry;
+  }
+
+  p{
+    animation-name: blurFadeIn;
+  }
+}
+
+@keyframes blurFadeIn{
+  0%{
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  100%{
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.head{
+  background-color: #7FB3D5;
+}
+/* Sidebar Styles */
+.sidebar {
+  position: absolute;
+  right: -250px; /* Start hidden on the left */
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0; /* When open, move it into view */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 4px;
+  position: relative;
+}
+
+.sidebar ul li {
+  padding-bottom: 20px;
+  width: fit-content;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar ul li a {
+  color: #ededed;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar ul li::after {
+  content: "";
+  position: absolute;
+  background-color: #82E0AA;
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 1s;
+}
+
+.sidebar ul li:hover::after{
+  height: 4px;
+}
+
+/* Button to Toggle Sidebar */
+.toggle-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #82E0AA;
+  color: rgb(27, 24, 27);
+  border-radius: 5px;
+  outline: 1px solid rgb(27, 24, 27);
+  position: fixed;
+  height: 40px;
+  top:30px;
+  right: 20px;
+  z-index: 1100;
+}
+
+
+
+/* Overlay that appears when sidebar is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+table{
+  flex: 1;
+  width: 100%;
+}
+th,td{
+  text-align: start;
+}
+
+table tr{
+  padding:10px 0;
+  border:1px solid #0a0a0a;
+}
+tbody tr:nth-child(odd){
+  background-color: white;
 }
