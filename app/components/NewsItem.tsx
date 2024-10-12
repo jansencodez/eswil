@@ -1,30 +1,35 @@
-'use client'
-
+'use client';
+import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import image1 from "../assets/images/IMG-20241009-WA0046.jpg";
 import image2 from "../assets/images/IMG-20241009-WA0050.jpg";
-import image3 from "../assets/images/IMG-20241009-WA0023.jpg"
+import image3 from "../assets/images/IMG-20241009-WA0023.jpg";
 
-function NewsItem() {
-  const images=[
-    {src:image1, text:'Eswil pupils&apos; graduation: Hosted at KAG church Munami'},
-    {src:image2, text:'some text about event'},
-    {src:image3, text:'some text about event'},
+interface ImageItem {
+  src: StaticImageData;
+  text: string;
+}
 
+const NewsItem: React.FC = () => {
+  const images: ImageItem[] = [
+    { src: image1, text: "Eswil pupils' graduation: Hosted at KAG church Munami" },
+    { src: image2, text: 'some text about event' },
+    { src: image3, text: 'some text about event' },
   ];
-  
-  const [selectedImage, setSetselectedImage] = useState(null);
 
-  const handleClick = (src:any)=>{
-    setSetselectedImage(src);
-  }
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
 
-  const handleClose = ()=>{
-    setSetselectedImage(null);
-  }
+  const handleClick = (src: StaticImageData) => {
+    setSelectedImage(src);
+  };
+
+  const handleClose = () => {
+    setSelectedImage(null);
+  };
+
   return (
-    <div className='w-ful overflow-x-auto '>
+    <div className='w-full overflow-x-auto '>
       <div className='flex space-x-4 p-4 relative'>
         {images.map((image, index) => (
           <div
@@ -38,7 +43,9 @@ function NewsItem() {
               fill
               className='rounded-lg shadow-md max-h-[200px] object-cover'
             />
-            <p className='absolute bottom-[10px] shadow-inner border border-e-4 border-s-4 animate-scrollLeft max-w-100 text-clip'>{image.text}</p>
+            <p className='absolute bottom-[10px] shadow-inner border border-e-4 border-s-4 animate-scrollLeft max-w-100 text-clip'>
+              {image.text}
+            </p>
           </div>
         ))}
       </div>
@@ -50,8 +57,8 @@ function NewsItem() {
             <Image
               src={selectedImage}
               alt="Selected Image"
-              width={"100%"}
-              height={"auto"}
+              width={1000}  // Fixed width, should be a number
+              height={600}  // Fixed height, should be a number
               className="rounded-lg"
             />
             {/* Close button */}
@@ -65,7 +72,7 @@ function NewsItem() {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default NewsItem
+export default NewsItem;

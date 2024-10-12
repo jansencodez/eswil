@@ -1,20 +1,25 @@
-'use client'
+'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
 
-function ImageGallery({images:[]}) {
-  const [selectedImage, setSetselectedImage] = useState(null);
+interface ImageGalleryProps {
+  images: StaticImageData[];
+}
 
-  const handleClick = (src:any)=>{
-    setSetselectedImage(src);
-  }
+const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
 
-  const handleClose = ()=>{
-    setSetselectedImage(null);
-  }
+  const handleClick = (src: StaticImageData) => {
+    setSelectedImage(src);
+  };
+
+  const handleClose = () => {
+    setSelectedImage(null);
+  };
+
   return (
-    <div className='w-ful overflow-x-auto'>
+    <div className='w-full overflow-x-auto'>
       <div className='flex space-x-4 p-4'>
         {images.map((src, index) => (
           <div
@@ -39,8 +44,8 @@ function ImageGallery({images:[]}) {
             <Image
               src={selectedImage}
               alt="Selected Image"
-              width={"100%"}
-              height={"auto"}
+              width={1000}  // Type should be number
+              height={600}  // Type should be number
               className="rounded-lg"
             />
             {/* Close button */}
@@ -54,7 +59,7 @@ function ImageGallery({images:[]}) {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ImageGallery
+export default ImageGallery;
