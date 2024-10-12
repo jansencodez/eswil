@@ -44,7 +44,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
             <Image
               src={selectedImage}
               alt="Selected Image"
-              width={1000}  // Type should be number
+              width={400}  // Type should be number
               height={600}  // Type should be number
               className="rounded-lg"
             />

@@ -57,7 +57,7 @@ const NewsItem: React.FC = () => {
             <Image
               src={selectedImage}
               alt="Selected Image"
-              width={1000}  // Fixed width, should be a number
+              width={400}  // Fixed width, should be a number
               height={600}  // Fixed height, should be a number
               className="rounded-lg"
             />
