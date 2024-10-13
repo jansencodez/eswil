@@ -1,6 +1,14 @@
+'use client'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 function page() {
+  const router=useRouter();
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the form from refreshing the page
+    router.push('../../pages/admin/dashboard');
+  };
+
   return (
     <div>
       <form className="bg-off-white p-6 rounded-lg shadow-md w-full max-w-lg mx-auto">
@@ -46,6 +54,7 @@ function page() {
         <button
           className="bg-sunflower-yellow text-navy-blue font-bold py-2 px-4 rounded-lg w-full hover:bg-yellow-600 transition duration-200"
           type="submit"
+          onClick={(e)=>handleSubmit(e)}
         >
           Submit
         </button>
