@@ -30,7 +30,7 @@ export default function Sidebar() {
           <li><Link href="#contact">Events</Link></li>
           <li><a href="#contact">News</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><Link href="../pages/admin/">Admin Access</Link></li>
+          <li><Link href="../pages/admin">Admin Access</Link></li>
         </ul>
       </div>}
 
@@ -42,7 +42,7 @@ export default function Sidebar() {
           <li><Link href="#contact">Events</Link></li>
           <li><a href="#contact">News</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><Link href="../pages/admin/">Admin Access</Link></li>
+          <li><Link href="../admin">Admin Access</Link></li>
         </ul>
       </div>
 
