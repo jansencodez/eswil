@@ -16,19 +16,17 @@ const layout = ({ children }) => {
               <Image 
               src={image1}
               alt='logo'
-              width={20}
-              height={20}
-              className='rounded-full z-50
+              className='flex contain w-[50px] h-[50px] outline-purple-900 outline-8 rounded-full
               '
             />
             </section>
             <section className='flex flex-1 pl-2'>
               <ul className='flex flex-row flex-1 justify-between items-center'>
-                <li><Link href="/">Dashboard</Link></li>
-                <li><Link href="/students">Students</Link></li>
-                <li><Link href="/teachers">Teachers</Link></li>
-                <li><Link href="/reports">Reports</Link></li>
-                <li><Link href="/settings">Settings</Link></li>
+                <li className='p-3 hover:bg-slate-400 hover:text-black'><Link href="./dashboard">Dashboard</Link></li>
+                <li className='p-3 hover:bg-slate-400 hover:text-black'><Link href="/students">Students</Link></li>
+                <li className='p-3 hover:bg-slate-400 hover:text-black'><Link href="/teachers">Teachers</Link></li>
+                <li className='p-3 hover:bg-slate-400 hover:text-black'><Link href="/reports">Reports</Link></li>
+                <li className='p-3 hover:bg-slate-400 hover:text-black'><Link href="/settings">Settings</Link></li>
               </ul>
             </section>
           </nav>

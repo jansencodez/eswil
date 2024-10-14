@@ -12,10 +12,8 @@ function Header() {
         <Image 
           src={image1}
           alt='logo'
-          width={60}
-          height={60}
-          className='rounded-full z-50
-          '
+         className='flex contain w-[60px] h-[60px] outline-purple-900 outline-8 rounded-full
+              '
         />
       </div>
       <div className='w-36 flex '>
