@@ -29,6 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="NX1kZYUGK2EopVmXMixt1jGMnWTCVDMfnrRlCHL9bQQ" />
+        <meta name="description" content="Welcome to Eswil Preparatory School(TEPS)" />
+        <meta name="keywords" content="eswil, eswil munami, eswil school, eswil preparatory school, preparatory schools kenyan schools, schools" />
+        <meta property="og:Eswil" content="Home - Eswil" />
+        <meta property="og:description" content="Join us today!" />
+        <meta property="og:url" content="https://eswil.vercel.app/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
