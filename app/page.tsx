@@ -22,36 +22,16 @@ const Page: React.FC = () => {
             There are no announcements right now.
           </p>
         </section>
-
         <section className="flex flex-col justify-center m-0 shadow-lg my-4 bg-slate-300 p-3">
           <p className="text-start z-0">
             Welcome to <strong>Eswil Preparatory School</strong>, the best place for your child&apos;s academic growth.
           </p>
           <hr style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
           <p>
-            Motto: <strong>Nurturing Minds, Shaping Bright Futures</strong>
+            <strong>Nurturing Minds, Shaping Bright Futures</strong>
           </p>
-          <hr style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
-          <p>
-            Mission: <strong>To Inpire students in achieving their academic potential, nurturing talents and preparing them for the visionary global opportunities</strong>
-          </p>
-          <hr style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
-          <p>
-            Vision: <strong>To provide opportunity to all students in developing their full potential in academia and upscore their abilities and talents in a way that builds confidence and enables them live their lives to its fullness</strong>
-          </p>
-          <hr style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
-          <dl>
-            <dt>Core Values&#40;RICATEG&#41;</dt>
-            <dd>Respect</dd>
-            <dd>Integrity</dd>
-            <dd>Compation</dd>
-            <dd>Accountability</dd>
-            <dd>Teamwork</dd>
-            <dd>Excellence</dd>
-            <dd>Gratitute</dd>
-          </dl>
         </section>
-
+        <NewsItem/>
         <section className="flex flex-wrap flex-col md:flex-row lg:flex-row justify-evenly p-6 items-center m-2 border border-spacing-3 border-y-black">
           <div className="card-btn">
             <Link href="./pages/admissions">
@@ -288,6 +268,27 @@ const Page: React.FC = () => {
       </main>
 
       <footer className="sticky bg-slate-950 text-white flex flex-col mt-5 pt-8 pb-8 pr-2 pl-2 justify-start items-center">
+        <section>
+        <p>
+            <strong>Mission: </strong>To Inpire students in achieving their academic potential, nurturing talents and preparing them for the visionary global opportunities
+          </p>
+          <hr style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
+          <p>
+            <strong>Vision: </strong>To provide opportunity to all students in developing their full potential in academia and upscore their abilities and talents in a way that builds confidence and enables them live their lives to its fullness
+          </p>
+          <hr style={{ width: '100%', height: 2, backgroundColor: 'black' }} />
+          <dl>
+            <dt><strong>Core Values&#40;RICATEG&#41;</strong></dt>
+            <dd>Respect</dd>
+            <dd>Integrity</dd>
+            <dd>Compation</dd>
+            <dd>Accountability</dd>
+            <dd>Teamwork</dd>
+            <dd>Excellence</dd>
+            <dd>Gratitute</dd>
+          </dl>
+        </section>
+        <hr className="md:hidden bg-white lg:hidden w-full" />
         <section className="flex flex-col md:flex-row lg:flex-row">
           <section>
             <p>
@@ -297,6 +298,7 @@ const Page: React.FC = () => {
               <Link href="#">Facebook</Link>
             </p>
           </section>
+          <hr className="md:hidden bg-white lg:hidden" />
           <section>
             <p>
               <strong>Email us: </strong>
@@ -311,6 +313,7 @@ const Page: React.FC = () => {
             </p>
           </section>
         </section>
+        <hr className="md:hidden bg-white lg:hidden w-full" />
         <section>
           <p>&copy; Copyright 2024</p>
         </section>
