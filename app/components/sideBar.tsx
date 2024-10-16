@@ -14,7 +14,7 @@ export default function Sidebar() {
 
 
   return (
-    <>
+    <div className='relative flex flex-1 h-12'>
       {/* Button to open/close the sidebar */}
     <button onClick={toggleSidebar} className="toggle-btn border-y-2 border-y-white lg:hidden md:hidden" id='t-btn'>
         {isOpen==true ? <i className='fa-solid fa-x'></i> : <i className='fa-solid fa-bars'></i>}
@@ -48,6 +48,6 @@ export default function Sidebar() {
 
       {/* Optional Overlay to close sidebar when clicking outside */}
       {isOpen && <div className="overlay lg:hidden md:hidden" onClick={toggleSidebar}></div>}
-    </>
+    </div>
   );
 }

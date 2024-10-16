@@ -142,10 +142,10 @@ body {
   color: rgb(27, 24, 27);
   border-radius: 5px;
   outline: 1px solid rgb(27, 24, 27);
-  position: fixed;
+  position: absolute;
   height: 40px;
-  top:30px;
-  right: 20px;
+  top:0;
+  right: 0;
   z-index: 1100;
 }
 
