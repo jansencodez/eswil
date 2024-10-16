@@ -29,6 +29,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="NX1kZYUGK2EopVmXMixt1jGMnWTCVDMfnrRlCHL9bQQ" />
+        <meta name="google-adsense-account" content="ca-pub-4394790876666238"/>
+        
         <meta name="description" content="Welcome to Eswil Preparatory School(TEPS)" />
         <meta name="keywords" content="eswil, eswil munami, eswil school, eswil preparatory school, preparatory schools kenyan schools, schools" />
         <meta property="og:Eswil" content="Home - Eswil" />
