@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://eswil.vercel.app
+
+# Sitemaps
+Sitemap: https://eswil.vercel.app/sitemap.xml
