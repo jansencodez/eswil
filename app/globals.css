@@ -81,14 +81,18 @@ body {
 /* Sidebar Styles */
 .sidebar {
   position: absolute;
-  right: -250px; /* Start hidden on the left */
+  right: -250px;
   overflow-x: hidden;
   transition: 0.3s ease;
   z-index: 1000;
+  padding: 10px;
 }
 
 .sidebar.open {
-  right: 0; /* When open, move it into view */
+  right: 0;
+  flex: 1;
+  justify-content: space-between;
+
 }
 
 .sidebar ul {
@@ -138,14 +142,13 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #82E0AA;
   color: rgb(27, 24, 27);
   border-radius: 5px;
   outline: 1px solid rgb(27, 24, 27);
   position: absolute;
   height: 40px;
-  top:0;
-  right: 0;
+  top:10px;
+  right: 10px;
   z-index: 1100;
 }
 

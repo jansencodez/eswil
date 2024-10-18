@@ -11,7 +11,7 @@ function Admin() {
 
   return (
     <div>
-      <form className="bg-off-white p-6 rounded-lg shadow-md w-full max-w-lg mx-auto">
+      <form className=" p-6 rounded-lg shadow-md w-full max-w-lg mx-auto">
         <h2 className="text-2xl font-bold mb-4 text-navy-blue">Admin Access</h2>
         
         <div className="mb-4">
