@@ -186,7 +186,7 @@ const Page: React.FC = () => {
 
       {/* Footer Section */}
       <footer className="bg-red-800 text-white p-6 mt-6">
-        <div className="flex justify-between">
+        <div className="flex justify-between mr-4">
           <div>
             <h4 className="text-xl font-bold">The Eswil Preparatory School</h4>
             <p className="mt-4 text-sm">
@@ -194,11 +194,12 @@ const Page: React.FC = () => {
               reserved.
             </p>
           </div>
-          <div className="flex gap-4">
+          <div className="grid grid-cols-2 gap-2">
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex flex-col"
             >
               <i className="fa-brands fa-twitter text-xl"></i>
               Twitter
@@ -207,11 +208,13 @@ const Page: React.FC = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex flex-col"
             >
               <i className="fa-brands fa-facebook text-xl"></i>
               Facebook
             </a>
             <a
+              className="flex flex-col"
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -220,6 +223,7 @@ const Page: React.FC = () => {
               Instagram
             </a>
             <a
+              className="flex flex-col"
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
