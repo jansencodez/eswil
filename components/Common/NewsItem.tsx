@@ -45,7 +45,7 @@ const NewsItem: React.FC<NewsItemProps> = ({ data }) => {
         {data?.map((update) => (
           <div
             key={update._id}
-            className="relative border border-gray-200 bg-white rounded-lg shadow-md max-w-[350px] cursor-pointer hover:scale-105 transition-all duration-300 flex flex-col items-center"
+            className="relative border border-gray-200 bg-white rounded-lg shadow-md max-w-[350px] cursor-pointer hover:scale-105 transition-all duration-75 flex flex-col items-center"
             onClick={() => handleClick(update)}
           >
             <div className="relative w-full h-[250px]">
