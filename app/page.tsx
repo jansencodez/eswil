@@ -62,10 +62,7 @@ const Page: React.FC = () => {
       {/* Call to Action Section */}
       <section className="flex flex-wrap justify-center gap-6 p-8 mt-6 bg-yellow-50 rounded-lg shadow-md">
         <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
-          <Link
-            href="/pages/admissions"
-            className="flex items-center space-x-2"
-          >
+          <Link href="/admissions" className="flex items-center space-x-2">
             <span>Join us</span>
             <i className="fa-solid fa-users"></i>
           </Link>
