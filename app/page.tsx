@@ -201,6 +201,7 @@ const Page: React.FC = () => {
               rel="noopener noreferrer"
             >
               <i className="fa-brands fa-twitter text-xl"></i>
+              Twitter
             </a>
             <a
               href="https://facebook.com"
@@ -208,6 +209,7 @@ const Page: React.FC = () => {
               rel="noopener noreferrer"
             >
               <i className="fa-brands fa-facebook text-xl"></i>
+              Facebook
             </a>
             <a
               href="https://instagram.com"
@@ -215,6 +217,7 @@ const Page: React.FC = () => {
               rel="noopener noreferrer"
             >
               <i className="fa-brands fa-instagram text-xl"></i>
+              Instagram
             </a>
             <a
               href="https://youtube.com"
@@ -222,6 +225,7 @@ const Page: React.FC = () => {
               rel="noopener noreferrer"
             >
               <i className="fa-brands fa-youtube text-xl"></i>
+              Youtube
             </a>
           </div>
         </div>

@@ -20,9 +20,15 @@ export default function Sidebar() {
         id="t-btn"
       >
         {isOpen ? (
-          <i className="fa-solid fa-x"></i>
+          <p>
+            <i className="fa-solid fa-x"></i>
+            Close
+          </p>
         ) : (
-          <i className="fa-solid fa-bars"></i>
+          <p>
+            <i className="fa-solid fa-bars"></i>
+            Menu
+          </p>
         )}
       </button>
 
