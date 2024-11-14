@@ -68,7 +68,7 @@ const ContactPage = () => {
             </h3>
             <p className="text-gray-600">
               Eswil Preparatory School, <br />
-              1234 School Road, Nairobi, Kenya
+              Mumias-Busia RD Munami, Kakamega, Kenya
             </p>
           </div>
 
