@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -9,13 +14,240 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
+    --background: #ededed;
   }
 }
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+mark {
+  background-color: rgb(241, 219, 223);
+  padding: 4px;
+  border-radius: 10px;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.card-btn {
+  @apply rounded-xl border border-cyan-950 p-4 h-12 flex w-full lg:w-fit md:w-fit justify-center items-center shadow-lg m-2 text-lg font-semibold focus:outline-none focus:ring-inset focus:ring-cyan-500 focus:ring-offset-2;
+}
+
+.card-btn:hover {
+  @apply border-cyan-950 hover:bg-yellow-300 transition-all duration-300 cursor-pointer;
+}
+
+.card {
+  @apply m-2 outline-none rounded-xl p-4 shadow-lg flex flex-col justify-between bg-white hover:shadow-xl transition-shadow duration-200 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+}
+
+.loader {
+  display: inline-block;
+  border-radius: 50%;
+  border: 4px solid;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@layer components {
+  p {
+    animation: 0.5s ease-in both;
+
+    animation-timeline: view();
+
+    animation-range: entry;
+  }
+
+  p {
+    animation-name: blurFadeIn;
+  }
+}
+
+@keyframes blurFadeIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.head {
+  background-color: #7fb3d5;
+}
+/* Sidebar Styles */
+.sidebar {
+  position: absolute;
+  right: -250px;
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.sidebar.open {
+  right: 10px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2px;
+  position: relative;
+}
+
+.sidebar ul li {
+  padding-bottom: 10px;
+  width: fit-content;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar ul li a {
+  color: #141313;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar ul li::after {
+  content: "";
+  position: absolute;
+  background-color: #e7ae0f;
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 1s;
+}
+
+.sidebar ul li:hover::after {
+  height: 2px;
+}
+
+/* Button to Toggle Sidebar */
+.toggle-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(27, 24, 27);
+  border-radius: 5px;
+  position: absolute;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  z-index: 1100;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Overlay that appears when sidebar is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* For better overlay effect */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes extra space between borders */
+  outline: 1px solid #0a0a0a; /* Border around the table */
+  margin: 20px 0; /* Margin around the table */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+th {
+  background-color: #f2f2f2; /* Light gray background for the header */
+  color: #0a0a0a; /* Dark text color for the header */
+  text-align: left;
+  padding: 12px 15px; /* Padding inside table header */
+  border-bottom: 2px solid #0a0a0a; /* Border under the header for separation */
+  font-weight: bold; /* Making header text bold */
+}
+
+td {
+  padding: 10px 15px; /* Padding inside table cells */
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Subtle border under each row */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light gray for odd rows for better readability */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; /* Highlight rows when hovered */
+}
+
+table tr {
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+tbody tr:last-child td {
+  border-bottom: none; /* Remove bottom border for the last row */
+}
+
+table caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  color: #0a0a0a;
+}
+
+/* Add this to your global CSS file (e.g., styles/globals.css) */
+.faded-div {
+  @apply relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1) 30%
+    ),
+    #e2e8f0; /* Light gray */
+}
+dl dd {
+  padding-left: 35px;
 }
