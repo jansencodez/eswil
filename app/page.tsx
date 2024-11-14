@@ -60,24 +60,24 @@ const Page: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="flex flex-wrap justify-center gap-6 p-8 mt-6 bg-yellow-50 rounded-lg shadow-md">
-        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
+      <section className="flex flex-wrap justify-center gap-4 p-8 mt-4 bg-yellow-50 rounded-lg shadow-md">
+        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-75">
           <Link href="/admissions" className="flex items-center space-x-2">
             <span>Join us</span>
             <i className="fa-solid fa-users"></i>
           </Link>
         </div>
-        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
+        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-75">
           <Link href="/learn-more">
             Learn more <i className="fa-solid fa-arrow-right"></i>
           </Link>
         </div>
-        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
+        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-75">
           <Link href="/contact">
             Contact us <i className="fa-solid fa-phone"></i>
           </Link>
         </div>
-        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
+        <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-75">
           Our Teachers <i className="fa-solid fa-clipboard-user"></i>
         </div>
       </section>
