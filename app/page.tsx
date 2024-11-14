@@ -71,10 +71,14 @@ const Page: React.FC = () => {
           </Link>
         </div>
         <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
-          Learn more <i className="fa-solid fa-arrow-right"></i>
+          <Link href="/learn-more">
+            Learn more <i className="fa-solid fa-arrow-right"></i>
+          </Link>
         </div>
         <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
-          Contact us <i className="fa-solid fa-phone"></i>
+          <Link href="/contact">
+            Contact us <i className="fa-solid fa-phone"></i>
+          </Link>
         </div>
         <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-300">
           Our Teachers <i className="fa-solid fa-clipboard-user"></i>
