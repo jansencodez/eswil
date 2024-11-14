@@ -60,7 +60,7 @@ const Page: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="flex flex-wrap justify-center gap-4 p-8 mt-4 bg-yellow-50 rounded-lg shadow-md">
+      <section className="flex flex-wrap justify-center gap-4 p-2 mt-4 bg-yellow-50 rounded-lg shadow-md">
         <div className="bg-red-600 text-white py-4 px-8 rounded-lg hover:bg-red-700 transition duration-75">
           <Link href="/admissions" className="flex items-center space-x-2">
             <span>Join us</span>
