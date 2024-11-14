@@ -158,7 +158,7 @@ const Layout: React.FC<LayoutProps> = ({ setCurrentContent, children }) => {
       <section className="hidden lg:flex flex-col bg-white h-[500px] justify-start items-start px-4">
         <div className="grid grid-rows-[20px,1fr,1fr,1fr,1fr,1fr] gap-4 justify-center bg-blue-100 p-4 w-full rounded-2xl shadow-sm">
           <h2 className="flex justify-center items-center text-xl font-semibold text-gray-800">
-            <strong>Admin Dashboard</strong>
+            <strong>Admin Dashboa</strong>
           </h2>
           {adminName && (
             <h3 className="text-gray-800 text-center">Hello, {adminName}</h3>
